@@ -22,6 +22,7 @@ sade('ley')
 	.option('-d, --dir', 'The directory of migration files to run', 'migrations')
 	.option('-c, --config', 'Path to \`ley\` config file', 'ley.config.js')
 	.option('-r, --require', 'Additional module(s) to preload')
+	.option('--client', 'One of: postgres, pg, mysql, better-sqlite3, arangojs')
 
 	.command('up')
 		.describe('Run "up" migration(s). Applies all outstanding items.')
