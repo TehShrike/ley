@@ -1,3 +1,5 @@
+exports.collections = []
+
 exports.up = async DB => {
 	console.log('hello from inside :: 001 @ up');
 

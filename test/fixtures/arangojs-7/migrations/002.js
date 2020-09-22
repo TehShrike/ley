@@ -1,3 +1,5 @@
+exports.collections = [ 'todos' ]
+
 exports.up = async DB => {
 	console.log('hello from inside :: 002 @ up');
 
@@ -28,5 +30,5 @@ exports.up = async DB => {
 exports.down = async DB => {
 	console.log('hello from inside :: 002 @ down');
 	const todos = await DB.collection('todos')
-	await todos.truncate()
+	await DB.transaction.step(() => todos.truncate())
 }
